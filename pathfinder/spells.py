@@ -1,6 +1,6 @@
 from csv import DictReader, DictWriter
 from pathlib import Path
-from typing import Dict, Iterable, List, NamedTuple, Optional, FrozenSet
+from typing import Dict, FrozenSet, Iterable, List, NamedTuple, Optional
 
 from bs4 import BeautifulSoup
 from bs4.element import Tag
