@@ -5,6 +5,8 @@ from typing import Dict, FrozenSet, Iterable, List, NamedTuple, Optional
 from bs4 import BeautifulSoup
 from bs4.element import Tag
 
+from .shared import data_dir
+
 
 class Spell(NamedTuple):
     name: str
@@ -21,10 +23,6 @@ class Spell(NamedTuple):
 
     def __repr__(self):
         return f"Spell(name='{self.name}', level={self.level}, summary='{self.summary}')"
-
-
-def data_dir() -> Path:
-    return Path(__file__).parent / "data"
 
 
 def iter_csv() -> Iterable[Dict[str, str]]:
